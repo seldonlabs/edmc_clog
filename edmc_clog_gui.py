@@ -24,6 +24,7 @@ class Gui(tk.Frame):
         title.pack(anchor=tk.W)
 
         self.cmdr = None
+        self.err_msg = None
         self.result = l_utils.NO_RESULTS
 
         self.status_label = tk.Label(self, text=STATUS_INIT_TXT)
@@ -61,3 +62,13 @@ class Gui(tk.Frame):
             self.status_label['text'] = STATUS_ACTIVE_TXT
             self.res_label['text'] = "{} not found".format(self.cmdr)
             self.res_label['fg'] = ED_ORANGE
+
+        elif self.result == l_utils.IS_ERR:
+            self.status_label['text'] = STATUS_ACTIVE_TXT
+            self.res_label['text'] = self.err_msg
+            self.res_label['fg'] = "red"
+
+        else:
+            self.status_label['text'] = STATUS_ACTIVE_TXT
+            self.res_label['text'] = "Unknown Error"
+            self.res_label['fg'] = "red"

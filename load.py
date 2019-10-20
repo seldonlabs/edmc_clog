@@ -69,6 +69,7 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
 
                     if type(res) is str:
                         _gui.result = l_utils.IS_ERR
+                        _gui.err_msg = res
                     elif type(res) is dict:
                         _gui.cmdr = pilot_name_localised
                         _gui.result = l_utils.is_clog(res)
