@@ -1,11 +1,11 @@
 # edmc_clog
 Show if a commander was reported as a combat logger.
 
-A plugin for EDMC that it tells you if a commander was reported as a Combat Logger by the Elite Dangerous community.
+A plugin for [EDMC](https://github.com/Marginal/EDMarketConnector) that it tells you if a commander was reported as a Combat Logger by the Elite Dangerous community.
 
 ## Installation
 
-1. At the moment you need to clone this repository or download and extract the repository archive in your EDMC plugin directory.
+1. At the moment you need to clone this repository or download and extract the [repository zip archive](https://github.com/seldonlabs/edmc_clog/archive/master.zip) in your EDMC plugin directory.
 2. Then reboot or start EDMC.
 
 ## Usage
