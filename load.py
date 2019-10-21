@@ -4,7 +4,6 @@ import edmc_clog_utils as l_utils
 import edmc_clog_net as l_net
 import edmc_clog_gui as l_gui
 
-
 _flag_status = 0
 _hardpoints_deployed = False
 _gui = None
@@ -23,13 +22,6 @@ def plugin_app(parent):
 
 
 def dashboard_entry(cmdr, is_beta, entry):
-    """
-    Check for Status.json
-    :param cmdr:
-    :param is_beta:
-    :param entry:
-    :return:
-    """
     global _gui
     global _hardpoints_deployed
     global _flag_status
@@ -72,7 +64,9 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
                         _gui.err_msg = res
                     elif type(res) is dict:
                         _gui.cmdr = pilot_name_localised
-                        _gui.result = l_utils.is_clog(res)
+                        t = l_utils.is_clog(res)
+                        _gui.result = t[0]
+                        _gui.report_url = t[1]
                     else:
                         _gui.result = l_utils.IS_UNK_ERR
 
