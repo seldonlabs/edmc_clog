@@ -21,7 +21,7 @@ class ResBtn(tk.Button):
         tk.Button.__init__(self, parent, *args, **kwargs)
         self.grid(row=0, column=1)
         theme.register(self)
-        self.bd = 0
+        self['bd'] = 0
 
     def set_is_cl(self):
         self['text'] = "Check Report"
@@ -65,25 +65,20 @@ class Gui(tk.Frame):
         # header
         header = tk.Frame(self)
         header.pack(anchor=tk.NW)
-        theme.register(header)
 
-        tk.Label(header, text="CLogs v{}".format(l_utils.APP_VER), fg="white").grid(row=0, column=0)
+        tk.Label(header, text="CLogs v{}".format(l_utils.APP_VER)).grid(row=0, column=0)
 
-        self.status_label = tk.Label(header, text=STATUS_INIT_TXT)
+        self.status_label = tk.Label(header, text=STATUS_INIT_TXT, fg=ED_ORANGE, bg="black")
         self.status_label.grid(row=0, column=1)
 
         # result
         result = tk.Frame(self)
         result.pack(anchor=tk.NW)
-        theme.register(result)
 
         self.cmdr_label = tk.Label(result, text=self.cmdr)
-        theme.register(self.cmdr_label)
         self.cmdr_label.grid(row=0, column=0)
 
         self.res_btn = ResBtn(result, text=self.res_txt, state=tk.DISABLED, command=self.__report_callback)
-
-        theme.register(self.res_btn)
         self.res_btn.grid(row=0, column=1, padx=5, pady=5)
 
     def __report_callback(self):
