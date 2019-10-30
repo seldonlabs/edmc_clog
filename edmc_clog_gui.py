@@ -78,7 +78,7 @@ class Gui(tk.Frame):
         self.cmdr_label = tk.Label(result, text=self.cmdr)
         self.cmdr_label.grid(row=0, column=0)
 
-        self.res_btn = ResBtn(result, text=self.res_txt, state=tk.DISABLED, command=self.__report_callback)
+        self.res_btn = ResBtn(result, text=self.res_txt, state=tk.DISABLED, bg="black", command=self.__report_callback)
         self.res_btn.grid(row=0, column=1, padx=5, pady=5)
 
     def __report_callback(self):
