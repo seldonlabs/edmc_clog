@@ -8,7 +8,7 @@ import edmc_clog_utils as l_utils
 ED_ORANGE = "#ff7100"
 
 STATUS_INIT_TXT = "Initialized"
-STATUS_INACTIVE_TXT = "Inactive (hardpoints deployed)"
+STATUS_INACTIVE_TXT = "Inactive (retract HP)"
 STATUS_ACTIVE_TXT = "Active"
 STATUS_CHECKING_TXT = "Checking..."
 
