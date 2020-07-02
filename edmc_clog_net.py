@@ -3,7 +3,7 @@ from requests import get, ConnectTimeout, ConnectionError, HTTPError, ReadTimeou
 
 def call_service(pilot_name):
     try:
-        r = get("http://roa.services.seldonlabs.com/?pattern={}".format(pilot_name), timeout=5)
+        r = get(f"http://roa.services.seldonlabs.com/?pattern={pilot_name}", timeout=5)
 
         r.raise_for_status()
 

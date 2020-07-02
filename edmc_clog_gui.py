@@ -1,5 +1,5 @@
 import webbrowser
-import Tkinter as tk
+import tkinter as tk
 
 from theme import theme
 
@@ -51,7 +51,6 @@ class ResBtn(tk.Button):
 class Gui(tk.Frame):
     def __init__(self, parent, *args, **kwargs):
         tk.Frame.__init__(self, parent, name="clog_container", *args, **kwargs)
-        self.pack(anchor=tk.NW)
         theme.register(self)
 
         # state

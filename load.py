@@ -9,8 +9,8 @@ _hardpoints_deployed = False
 _gui = None
 
 
-def plugin_start():
-    print "Starting {} v{}".format(l_utils.APP_NAME, l_utils.APP_VER)
+def plugin_start3(plugin_dir):
+    print(f"Starting {l_utils.APP_VER} v{l_utils.APP_VER}")
     return l_utils.APP_NAME
 
 
@@ -43,7 +43,7 @@ def dashboard_entry(cmdr, is_beta, entry):
                 _flag_status = flags
 
 
-def journal_entry(cmdr, is_beta, system, station, entry, state):
+def dashboard_entry(cmdr, is_beta, system, station, entry, state):
     global _gui
     global _hardpoints_deployed
 
@@ -52,7 +52,7 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
             if l_utils.is_scanned(entry):
                 coded_pilot_name = entry['PilotName'].split(':')
 
-                if coded_pilot_name[0] == "$cmdr_decorate":
+                if l_utils.is_cmdr(coded_pilot_name):
                     search_name = coded_pilot_name[1][6:-1]
                     pilot_name_localised = entry['PilotName_Localised']
 
@@ -74,4 +74,4 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
 
 
 def plugin_stop():
-    print "Stopping {}".format(l_utils.APP_NAME)
+    print(f"Stopping {l_utils.APP_NAME}")
