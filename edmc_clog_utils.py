@@ -31,7 +31,11 @@ def is_target_unlocked(entry):
 
 
 def is_scanned(entry):
-    return entry['ScanStage'] == 3
+    return "ScanStage" in entry and entry['ScanStage'] > 1
+
+
+def is_cmdr(pilot_name):
+    return pilot_name[0] == "$cmdr_decorate"
 
 
 def is_clog(res):
