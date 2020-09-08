@@ -2,7 +2,7 @@ import re
 from monitor import monitor
 
 APP_NAME = "EDMC Clog"
-APP_VER = "0.2.0"
+APP_VER = "0.2.1"
 
 # response flags
 IS_CL_BOT = 1
