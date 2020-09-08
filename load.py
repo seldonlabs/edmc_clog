@@ -43,7 +43,7 @@ def dashboard_entry(cmdr, is_beta, entry):
                 _flag_status = flags
 
 
-def dashboard_entry(cmdr, is_beta, system, station, entry, state):
+def journal_entry(cmdr, is_beta, system, station, entry, state):
     global _gui
     global _hardpoints_deployed
 
