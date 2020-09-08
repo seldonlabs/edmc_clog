@@ -1,9 +1,12 @@
 from requests import get, ConnectTimeout, ConnectionError, HTTPError, ReadTimeout
 
+from edmc_clog_gui import APP_VER
 
 def call_service(pilot_name):
     try:
-        r = get(f"http://roa.services.seldonlabs.com/?pattern={pilot_name}", timeout=5)
+        r = get(f"http://roa.services.seldonlabs.com/?pattern={pilot_name}", headers={
+          'User-Agent': f"EDMC-CLog-v-{APP_VER}"
+        }, timeout=5)
 
         r.raise_for_status()
 
