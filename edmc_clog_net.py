@@ -1,6 +1,6 @@
 from requests import get, ConnectTimeout, ConnectionError, HTTPError, ReadTimeout
 
-from edmc_clog_gui import APP_VER
+from edmc_clog_utils import APP_VER
 
 def call_service(pilot_name):
     try:
