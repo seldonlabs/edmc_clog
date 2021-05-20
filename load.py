@@ -1,4 +1,7 @@
-import plug
+try:
+    from plug import FlagsSupercruise, FlagsHardpointsDeployed
+except ImportError:
+    from edmc_data import FlagsSupercruise, FlagsHardpointsDeployed
 
 import edmc_clog_utils as l_utils
 import edmc_clog_net as l_net
@@ -28,11 +31,11 @@ def dashboard_entry(cmdr, is_beta, entry):
 
     if not is_beta:
         flags = entry['Flags']
-        _is_in_SC = flags & plug.FlagsSupercruise
+        _is_in_SC = flags & FlagsSupercruise
 
         # not in SC
         if not _is_in_SC:
-            _hardpoints_deployed = flags & plug.FlagsHardpointsDeployed
+            _hardpoints_deployed = flags & FlagsHardpointsDeployed
             if _hardpoints_deployed:
                 if _flag_status + 64 == flags:
                     _gui.set_status_inactive()
