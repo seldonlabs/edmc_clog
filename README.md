@@ -6,7 +6,7 @@ Combat Logger by the Elite Dangerous community.
 
 ## Installation
 
-1. Version [0.2.0](https://github.com/seldonlabs/edmc_clog/archive/v0.2.0.zip) only supports EDMC up to version 3.46. For EDMC v3.51beta0 or later you need to clone this repository or download and extract the [repository zip archive](https://github.com/seldonlabs/edmc_clog/archive/master.zip) in your EDMC plugin directory.
+1. Version [0.2.0](https://github.com/seldonlabs/edmc_clog/archive/v0.2.0.zip) only supports EDMC up to version 3.46. For EDMC v3.51beta0 or later you need to clone this repository or download and extract the [repository zip archive](https://github.com/seldonlabs/edmc_clog/archive/master.zip) in your EDMC plugin directory. Version v0.2.3 supports EDMC 5.0.
 2. Then reboot or start EDMC.
 
 ## Usage
