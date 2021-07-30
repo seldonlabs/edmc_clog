@@ -2,7 +2,7 @@ import re
 from monitor import monitor
 
 APP_NAME = "EDMC Clog"
-APP_VER = "0.2.2"
+APP_VER = "0.3.0"
 
 # response flags
 IS_CL_BOT = 1
@@ -36,6 +36,10 @@ def is_scanned(entry):
 
 def is_cmdr(pilot_name):
     return pilot_name[0] == "$cmdr_decorate"
+
+
+def is_text_cmd(entry):
+    return entry['event'] == 'SendText' and entry['Message'].strip().startswith('/clog')
 
 
 def is_clog(res):
