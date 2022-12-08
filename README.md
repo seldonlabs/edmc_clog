@@ -1,4 +1,7 @@
 # edmc_clog
+
+This plugin is depracted for now, the PvP bot is down for good.
+
 Show if a commander was reported as a combat logger.
 
 A plugin for [EDMC](https://github.com/Marginal/EDMarketConnector) that it tells you if a commander was reported as a
